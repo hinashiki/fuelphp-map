@@ -1,0 +1,3 @@
+This repository is under constructing...
+
+Usage: echo Map::forge()->center($latitude, $longitude)->output();
