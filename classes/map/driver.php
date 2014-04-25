@@ -28,9 +28,9 @@ abstract class Map_Driver
 	 *   array(
 	 *     'lat'   => n,
 	 *     'lng'   => n,
-	 *     'size'  => 'mid',
-	 *     'color' => ex. red,
-	 *     'label' => string
+	 *     'label' => string,
+	 *     'size'  => 'mid',   // static only
+	 *     'color' => ex. red, // static only
 	 *   ),
 	 *   ....
 	 * )
