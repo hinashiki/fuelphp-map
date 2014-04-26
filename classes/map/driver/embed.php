@@ -7,7 +7,7 @@
  * @author     Hinashiki
  * @license    MIT License
  * @copyright  2014 - Hinashiki
- * @link       currently none.
+ * @link       https://github.com/hinashiki/fuelphp-map
  */
 /**
  * Output Google Maps Embed API
