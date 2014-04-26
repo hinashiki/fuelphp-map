@@ -46,11 +46,13 @@ abstract class Map_Driver
 	 */
 	public function add_marker(array $marker)
 	{
-		// TODO: key correct check and throw Exception
+		if( ! isset($marker['lat']) or ! isset($marker['lng']))
+		{
+			throw new \PhpErrorException(__METHOD__.': lat and lng are must param.');
+		}
 		$this->_markers[] = $marker;
 		return $this;
 	}
-
 
 	/**
 	 * set center latitude and longitude
@@ -86,7 +88,6 @@ abstract class Map_Driver
 		return $this;
 	}
 
-
 	/**
 	 * set zoom
 	 *
@@ -113,7 +114,6 @@ abstract class Map_Driver
 		return $this;
 	}
 
-
 	/**
 	 * output html tag
 	 *
@@ -131,12 +131,4 @@ abstract class Map_Driver
 	 */
 	abstract protected function _output();
 
-	/**
-	 * if call $this, return output
-	 *
-	 */
-	public function __toString()
-	{
-		return $this->output();
-	}
 }

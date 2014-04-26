@@ -23,7 +23,11 @@ class Map_Driver_Static extends \Map_Driver
 
 	protected function _output()
 	{
-		// TODO: check lng, lat paramator and throw Exception
+		if(is_null($this->_center_lat) or is_null($this->_center_lng))
+		{
+			throw new \PhpErrorException(__METHOD__.': please set center position.');
+		}
+
 		$query = http_build_query(array(
 			'key'    => \Config::get('map.google.api_key.browser'),
 			'center' => $this->_center_lat.','.$this->_center_lng,

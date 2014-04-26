@@ -23,7 +23,11 @@ class Map_Driver_Embed extends \Map_Driver
 
 	protected function _output()
 	{
-		// TODO: check address paramator and throw Exception
+		if(strlen($this->_address) === 0)
+		{
+			throw new \PhpErrorException(__METHOD__.': please set address.');
+		}
+
 		$url = self::BASE_URL;
 		$query = http_build_query(array(
 			'key'      => \Config::get('map.google.api_key.browser'),
