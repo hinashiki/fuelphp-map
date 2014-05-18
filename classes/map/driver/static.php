@@ -19,7 +19,7 @@ namespace Map;
 
 class Map_Driver_Static extends \Map_Driver
 {
-	const BASE_URL = 'http://maps.googleapis.com/maps/api/staticmap';
+	const BASE_URL = '//maps.googleapis.com/maps/api/staticmap';
 
 	protected function _output()
 	{

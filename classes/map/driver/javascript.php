@@ -19,7 +19,7 @@ namespace Map;
 
 class Map_Driver_Javascript extends \Map_Driver
 {
-	const BASE_URL   = 'http://maps.googleapis.com/maps/api/js';
+	const BASE_URL   = '//maps.googleapis.com/maps/api/js';
 	const MAP_DIV_ID = 'googlemap__canvas';
 
 	protected function _output()
